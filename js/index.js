@@ -1,14 +1,59 @@
-const maleNames = ("Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame");
-const femaleNames = ("Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama");
-const weekNames = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+const maleNames = [
+  "Kwasi",
+  "Kwadwo",
+  "Kwabena",
+  "Kwaku",
+  "Yaw",
+  "Kofi",
+  "Kwame",
+];
+const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const weekNames = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-daysOfTheWeek = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
+var century = 19;
+var year = 1989;
+var month = 11;
+var day = 3;
+var gender = "M";
 
-var yearOfBirth = document.getElementById("yearOfBirth").value;
-console.log(yearOfBirth);
+function getNameAndDay(year, day, month, century, gender) {
+  var indexOfTheDay =
+    Math.round(
+      century / 4 -
+        2 * century -
+        1 +
+        (5 * year) / 4 +
+        (26 * (month + 1)) / 10 +
+        day
+    ) % 7;
+  var bornDayUser = weekNames[indexOfTheDay];
+  var name = null;
 
-var monthOfBirth = document.getElementById("monthOfBirth").value;
-console.log(monthOfBirth);
+  if (gender === "M") {
+    name = maleNames[indexOfTheDay];
+  } else if (gender === "F") {
+    name = femaleNames[indexOfTheDay];
+  } else {
+    alert("Invalid input please try again");
+  }
 
-var dayOfBirth = document.getElementById("dayOfBirth").value;
-console.log(dayOfBirth);
+  if (month < 1 || month > 12 || month == "") {
+    alert("Invalid input, please try again");
+  }
+
+  if (day < 1 || day > 31 || day == "") {
+    alert("Invalid input, please try again");
+  }
+
+  if (year < 1900 || year > 2022 || year == "") {
+    alert("Invalid output, please try again");
+  }
+}
