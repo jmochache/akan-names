@@ -18,11 +18,6 @@ const weekNames = [
   "Saturday",
 ];
 
-var century = 19;
-var year = 1989;
-var month = 11;
-var day = 3;
-var gender = "M";
 
 function getNameAndDay(year, day, month, century, gender) {
   var indexOfTheDay =
@@ -56,4 +51,8 @@ function getNameAndDay(year, day, month, century, gender) {
   if (year < 1900 || year > 2022 || year == "") {
     alert("Invalid output, please try again");
   }
+
+  var list = [bornDayUser, name];
+  return list;
 }
+
