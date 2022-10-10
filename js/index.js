@@ -18,23 +18,14 @@ const weekNames = [
   "Saturday",
 ];
 
-    var form = document.getElementById('form')
-    var yearOfBirth = document.getElementById('yearOfBirth');
-    var monthOfBirth = document.getElementById('monthOfBirth');
-    var dayOfBirth = document.getElementById('dayOfBirth');
-
-
-
-
-
-function getNameAndDay(yearOfBirth, day, month, century, gender) {
+function getNameAndDay(yearOfBirth, dayOfBirth, monthOfBirth, century, gender) {
   var indexOfTheDay =
     Math.round(
       century / 4 -
         2 * century -
         1 +
         (5 * yearOfBirth) / 4 +
-        (26 * (month + 1)) / 10 +
+        (26 * (monthOfBirth + 1)) / 10 +
         day
     ) % 7;
   var bornDayUser = weekNames[indexOfTheDay];
