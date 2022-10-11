@@ -1,63 +1,106 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Akan Name Calculator</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
     <style>
-      body{
+      body {
         background-image: url("images/background_image.jpg");
       }
     </style>
   </head>
-  
+
   <center>
-  <body id="Body">
-    <div class="content">
-      <div class="container">
-        
-        <br><br>
+    <body id="Body">
+      <div class="content">
+        <div class="container">
+          <br /><br />
 
-        <p>Akan names come from a traditional naming system for people from countries such as Togo, Ivory Coast and Ghana. A child's name is determined by factors surrounding his or her birth. For example, the day of their birth. please fill below form correctly to get your akan name</p>
-        <h1>The Akan name generator!</h1>
-        <form class="myform" onsubmit="return getAkanName()">
-          <label for="year-of-birth">
-            Year:
-            <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
-          </label>
-          <label for="month-of-birth">
-            Month:
-            <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
-          </label>
-          <label for="day-of-birth">
-            Day:
-            <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
-          </label>
-          <br>
-          <label for="gender"><br>
-            Male
-            <input id="male-input" type="radio" name="gender" value="male" required>
-            Female
-            <input id="female-input" type="radio" name="gender" value="female" required>
+          <p>
+            Akan names come from a traditional naming system for people from
+            countries such as Togo, Ivory Coast and Ghana. A child's name is
+            determined by factors surrounding his or her birth. For example, the
+            day of their birth. please fill below form correctly to get your
+            akan name
+          </p>
+          <h1>The Akan name generator!</h1>
+          <form class="myform" onsubmit="return getAkanName()">
+            <label for="year-of-birth">
+              Year:
+              <input
+                id="year-input"
+                type="number"
+                name="year-of-birth"
+                placeholder="YYYY"
+                value=""
+                required
+              />
+            </label>
+            <label for="month-of-birth">
+              Month:
+              <input
+                id="month-input"
+                type="number"
+                name="month-of-birth"
+                placeholder="MM"
+                value=""
+                required
+              />
+            </label>
+            <label for="day-of-birth">
+              Day:
+              <input
+                id="day-input"
+                type="number"
+                name="day-of-birth"
+                placeholder="DD"
+                value=""
+                required
+              />
+            </label>
+            <br />
+            <label for="gender"
+              ><br />
+              Male
+              <input
+                id="male-input"
+                type="radio"
+                name="gender"
+                value="male"
+                required
+              />
+              Female
+              <input
+                id="female-input"
+                type="radio"
+                name="gender"
+                value="female"
+                required
+              />
+            </label>
+            <br /><br />
+            <input id="get-name" type="submit" name="" value="Generate name" />
+            <br /><br />
+          </form>
+          <form onsubmit="return clearInput()">
+            <input class="clear" type="submit" value="Clear" />
+          </form>
 
-          </label>
-          <br><br>
-          <input id="get-name" type="submit" name="" value="Generate name">
-          <br><br>
-        </form>
-        <form onsubmit="return clearInput()">
-          <input class="clear" type="submit" value="Clear">
-        </form>
-
-
-        <h4 id = display-name><strong>Your Akan name will be displayed below:</strong></h4>
-        <p id="result"></p>
+          <h4 id="display-name">
+            <strong>Your Akan name will be displayed below:</strong>
+          </h4>
+          <p id="result"></p>
+        </div>
       </div>
-    </div>
 
-    <script src="js/index.js"></script>
-
-  </body>
-</center>
+      <script src="js/index.js"></script>
+    </body>
+  </center>
 </html>
